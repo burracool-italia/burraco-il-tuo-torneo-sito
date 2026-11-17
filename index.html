@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burraco il tuo Torneo</title>
+<meta name="description" content="Il gestionale per organizzare tornei di burraco nel tuo circolo: iscrizioni, turni, punteggi e classifiche.">
+<style>
+  :root{
+    --bg:#f6f3ec; --fg:#1d2a24; --muted:#5b6862; --card:#ffffff; --line:#e2ddd0;
+    --green:#16573c; --green-d:#0f3f2b; --gold:#c8962e; --on-green:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#101a15; --fg:#eef2ee; --muted:#a3b0a9; --card:#18251f; --line:#2a3a32;
+           --green:#2f8f62; --green-d:#3aa874; --gold:#e0b04a; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 16px}
+  header.hero{background:linear-gradient(160deg,#0f3f2b,#16573c);color:#fff;padding:72px 0 64px;text-align:center}
+  .hero .suits{letter-spacing:.5em;color:var(--gold);font-size:1.4rem}
+  .hero h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;margin:.4em 0 .3em}
+  .hero p{max-width:640px;margin:0 auto 1.6em;font-size:1.15rem;opacity:.92}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--gold);color:#1d1604}
+  .btn.ghost{border-color:#fff;color:#fff}
+  section{padding:56px 0}
+  h2{font-size:1.8rem;margin:0 0 .6em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{margin:.2em 0 .4em;font-size:1.1rem;color:var(--green)}
+  .card p{margin:0;color:var(--muted)}
+  .steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 16px 64px;position:relative}
+  .steps li::before{content:counter(s);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700}
+  .cta{background:var(--card);border-block:1px solid var(--line);text-align:center}
+  .cta p{max-width:600px;margin:0 auto 1.4em;color:var(--muted)}
+  .cta .btn.primary{background:var(--green);color:var(--on-green)}
+  .cta .btn.ghost{border-color:var(--green);color:var(--green)}
+  footer{padding:28px 0;text-align:center;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="suits" aria-hidden="true">♠ ♥ ♦ ♣</div>
+    <h1>Burraco il tuo Torneo</h1>
+    <p>Il gestionale pensato per i circoli: organizza i tuoi tornei di burraco in modo semplice, veloce e senza errori di calcolo.</p>
+    <div class="btns">
+      <a class="btn primary" id="lnk-licenza-1" href="https://burracool-italia.github.io/gestionale-burraco-licenza/">Richiedi la licenza</a>
+      <a class="btn ghost" id="lnk-video-1" href="#video">Guarda la presentazione</a>
+    </div>
+  </div>
+</header>
+
+<section id="cosa">
+  <div class="wrap">
+    <h2>Cosa fa</h2>
+    <div class="grid">
+      <div class="card"><h3>Gestione del torneo</h3><p>Iscrizioni, sorteggio dei tavoli e dei turni, inserimento dei punteggi in pochi tocchi.</p></div>
+      <div class="card"><h3>Classifiche automatiche</h3><p>Classifica di serata e di circuito sempre aggiornate, pronte da mostrare ai giocatori.</p></div>
+      <div class="card"><h3>App per i giocatori</h3><p>I giocatori seguono torneo e risultati dal proprio telefono, senza chiedere al direttore di gara.</p></div>
+      <div class="card"><h3>Installazione su misura</h3><p>Il programma viene installato e configurato per il tuo circolo, con nome e dati personalizzati.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="video" style="padding-top:0">
+  <div class="wrap">
+    <h2>Guarda la presentazione</h2>
+    <p style="color:var(--muted)">I video mostrano il programma al lavoro, dalla preparazione del torneo alla classifica finale.</p>
+    <div class="btns" style="justify-content:flex-start">
+      <a class="btn primary" id="lnk-video-2" target="_blank" rel="noopener" href="PLAYLIST_YOUTUBE_URL">▶ Apri la playlist su YouTube</a>
+    </div>
+  </div>
+</section>
+
+<section id="come">
+  <div class="wrap">
+    <h2>Come ottenere il programma</h2>
+    <ol class="steps">
+      <li><strong>Compila la richiesta di licenza</strong> indicando circolo, referente ed email.</li>
+      <li><strong>Ricevi i dati di installazione</strong> via email, insieme al programma di installazione.</li>
+      <li><strong>Installa sul PC del circolo</strong> e inizia a organizzare i tuoi tornei.</li>
+    </ol>
+    <p style="color:var(--muted);margin-top:16px">Disponibile con prova di 30 giorni, licenza semestrale, annuale o pluriennale.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Pronto a partire?</h2>
+    <p>Invia la richiesta: ti ricontatteremo con tutto il necessario per attivare il programma nel tuo circolo.</p>
+    <div class="btns">
+      <a class="btn primary" id="lnk-licenza-2" href="https://burracool-italia.github.io/gestionale-burraco-licenza/">Richiedi la licenza</a>
+      <a class="btn ghost" id="lnk-video-3" target="_blank" rel="noopener" href="PLAYLIST_YOUTUBE_URL">Vedi i video</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© Burraco il tuo Torneo</div>
+</footer>
+
+<script>
+  // Imposta qui il link alla playlist YouTube: viene applicato a tutti i pulsanti video.
+  var PLAYLIST_YOUTUBE_URL = "https://www.youtube.com/playlist?list=PLDW_RSHtJcCk";
+  document.querySelectorAll('a[href="PLAYLIST_YOUTUBE_URL"]').forEach(function(a){ a.href = PLAYLIST_YOUTUBE_URL; });
+</script>
+</body>
+</html>
